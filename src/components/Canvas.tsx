@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Wrapper } from "./Canvas.style";
 import useCanvas from "@hooks/useCanvas";
-import mapBackground from "@public/images/map_background.jpeg";
+import mapBackground from "@assets/images/background.jpeg";
+import Character from "./Character";
+import getFrameRate from "./getFrameRate";
 
 const WIDTH = 1000;
 const HEIGHT = 700;
 
 const Canvas = () => {
-  const canvasRef = useCanvas((canvas) => {
+  let myCharacter: Character | null = null;
+  const canvasRef = useCanvas(async (canvas) => {
     canvas.width = WIDTH;
     canvas.height = HEIGHT;
-    // canvas.style.background = `url(${mapBackground})`;
+    canvas.style.background = `url(${mapBackground})`;
+    const frameRate = await getFrameRate();
+    myCharacter = new Character(canvas, frameRate);
+    document.addEventListener("keydown", myCharacter.hadleArrowKeyDown());
   });
+
+  useEffect(() => {
+    return () => {
+      myCharacter &&
+        document.removeEventListener(
+          "keydown",
+          myCharacter.hadleArrowKeyDown()
+        );
+    };
+  }, []);
 
   return (
     <Wrapper>
