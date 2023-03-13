@@ -1,5 +1,5 @@
 import CharacterImages from "./CharacterImages";
-import throttle from "./throttle";
+import throttle from "../utils/throttle";
 
 interface Position {
   x: number;
