@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Wrapper } from "./Canvas.style";
 import useCanvas from "@hooks/useCanvas";
 import mapBackground from "@assets/images/background.jpeg";
-import Character from "../../graphics/Character";
-import getFrameRate from "../../utils/getFrameRate";
+import Character from "@graphics/Character";
+import getFrameRate from "@utils/getFrameRate";
 
 const WIDTH = 1000;
 const HEIGHT = 700;
