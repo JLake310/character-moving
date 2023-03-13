@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/JLake310/character-moving/static/css/main.964fdded.css",
+    "main.js": "/JLake310/character-moving/static/js/main.8c20a64c.js",
+    "static/media/background.jpeg": "/JLake310/character-moving/static/media/background.bd5ac2319450f7662fa6.jpeg",
+    "index.html": "/JLake310/character-moving/index.html",
+    "main.964fdded.css.map": "/JLake310/character-moving/static/css/main.964fdded.css.map",
+    "main.8c20a64c.js.map": "/JLake310/character-moving/static/js/main.8c20a64c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.8c20a64c.js"
+  ]
+}
